@@ -300,6 +300,25 @@
       display: block;
     }
   }
+
+  .card {
+    display: grid;
+    padding: 1rem;
+    gap: var(--card-gap, 1rem);
+    background-color: var(--background-light);
+    border-radius: var(--border-radius-3);
+
+    img {
+      /* Design note: border radius on the inside should always be smaller or it looks bigger than outside one. */
+      border-radius: var(--border-radius-2);
+    }
+
+    .card__title {
+      /* instantiating variable with fallback allows us to change the variable from parent elements later */
+      font-size: var(--card-title-font-size, var(--font-size-heading-regular));
+      color: var(--card-title-color, var(--text-brand));
+    }
+  }
 }
 
 /* Content not visible for sighted users but available for screen reader users */
