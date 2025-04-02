@@ -319,6 +319,25 @@
       color: var(--card-title-color, var(--text-brand));
     }
   }
+
+  .button {
+    /* Outer is inline, inner is flex. */
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-accent-main);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: var(--border-radius-2);
+    font-size: var(--font-size-md);
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    background-color: var(--background-accent-light);
+    color: var(--text-high-contrast);
+  }
 }
 
 /* Content not visible for sighted users but available for screen reader users */
