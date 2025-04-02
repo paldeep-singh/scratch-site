@@ -302,6 +302,10 @@
       flex-wrap: wrap;
       gap: 0.5rem 1rem;
     }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .hero {
