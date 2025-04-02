@@ -280,6 +280,26 @@
       gap: 0.5rem 1rem;
     }
   }
+
+  .hero {
+    text-align: center;
+    font-size: var(--font-size-md);
+    color: var(--text-high-contrast);
+    background-image: url(/assets/hero.webp);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-heading-lg);
+
+    span {
+      font-size: var(--font-size-heading-xl);
+      color: var(--text-brand);
+      /* make sure emphasised text is always on its own line (do testing to make sure there's no weird spacing) */
+      display: block;
+    }
+  }
 }
 
 /* Content not visible for sighted users but available for screen reader users */
