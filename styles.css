@@ -243,6 +243,12 @@
     }
   }
 
+  .flex-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
   .equal-columns {
     display: grid;
     gap: var(--equal-columns-gap, 1rem);
@@ -473,6 +479,14 @@
   .button:hover,
   .button:focus-visible {
     background-color: var(--background-accent-light);
+    color: var(--text-high-contrast);
+  }
+
+  select {
+    padding: 0.5rem 1rem;
+    background-color: var(--background-accent-main);
+    border: 0;
+    border-radius: var(--border-radius-2);
     color: var(--text-high-contrast);
   }
 
