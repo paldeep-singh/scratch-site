@@ -338,7 +338,7 @@
 
     .card__title {
       /* instantiating variable with fallback allows us to change the variable from parent elements later */
-      font-size: var(--card-title-font-size, var(--font-size-heading-regular));
+      font-size: var(--card-title-font-size, var(--font-size-heading-sm));
       color: var(--card-title-color, var(--text-brand));
     }
   }
