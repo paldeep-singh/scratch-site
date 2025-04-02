@@ -218,6 +218,27 @@
   }
 }
 
+@layer components {
+  .site-header {
+    padding-block: 1rem;
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  .primary-navigation {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+  }
+}
+
 /* Content not visible for sighted users but available for screen reader users */
 @layer utilities {
   .visually-hidden {
