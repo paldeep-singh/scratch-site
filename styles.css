@@ -415,6 +415,26 @@
     background-color: var(--background-accent-light);
     color: var(--text-high-contrast);
   }
+
+  .skip-to-main:not(:focus) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .skip-to-main:focus {
+    top: 0.5em;
+    left: 0.5em;
+    position: absolute;
+    background: var(--background-accent-main);
+    padding: 1rem;
+    border-radius: var(--border-radius-1);
+    color: var(--text-high-contrast);
+  }
 }
 
 /* Content not visible for sighted users but available for screen reader users */
