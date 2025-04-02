@@ -198,6 +198,18 @@
     gap: var(--grid-flow-gap, 1rem);
   }
 
+  .grid-auto-fit {
+    --auto-fit-min-col-size: 250px;
+    display: grid;
+    gap: 1rem;
+    /* if min is too high, it can cause overflow at narrower sizes
+    hence we set the min inside as well. */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--auto-fit-min-col-size), 100%), 1fr)
+    );
+  }
+
   .section {
     --padding: 3.75rem;
 
@@ -378,8 +390,14 @@
     }
   }
 
+  .mushroom-guide {
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-color: var(--text-high-contrast);
+  }
+
   .card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     gap: var(--card-gap, 1rem);
     background-color: var(--background-light);
@@ -394,6 +412,48 @@
       /* instantiating variable with fallback allows us to change the variable from parent elements later */
       font-size: var(--card-title-font-size, var(--font-size-heading-sm));
       color: var(--card-title-color, var(--text-brand));
+    }
+
+    .card__note {
+      margin-block-start: auto;
+      background-color: var(--background-extra-light);
+      padding: 0.75rem;
+      border-radius: var(--border-radius-2);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      li {
+        font-family: var(--ff-heading);
+        color: var(--text-high-contrast);
+        font-size: var(--font-size-sm);
+        padding: 0 0.25rem;
+        background-color: var(--tag-bg, red);
+        border-radius: var(--border-radius-1);
+      }
+
+      [data-edible="edible"] {
+        --tag-bg: var(--background-accent-main);
+      }
+
+      [data-edible="toxic"] {
+        --tag-bg: var(--clr-red-500);
+      }
+
+      [data-season="summer"] {
+        --tag-bg: var(--background-accent-main);
+      }
+
+      [data-season="spring"] {
+        --tag-bg: var(--clr-teal-500);
+      }
+
+      [data-season="fall"] {
+        --tag-bg: var(--clr-orange-500);
+      }
     }
   }
 
