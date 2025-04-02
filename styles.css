@@ -296,6 +296,17 @@
     font-weight: 700;
   }
 
+  [aria-controls="primary-navigation"] {
+    z-index: 100;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    img {
+      border-radius: 0;
+    }
+  }
+
   .primary-navigation {
     ul {
       display: flex;
@@ -305,6 +316,30 @@
 
     a {
       text-decoration: none;
+    }
+
+    @media (width < 760px) {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      font-size: var(--font-size-lg);
+      font-family: var(--ff-heading);
+      font-weight: 700;
+      background-color: var(--background-accent-main);
+      padding: 2rem;
+      border-radius: 0 0 0 var(--border-radius-3);
+
+      ul {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      li + li {
+        border-top: 2px solid var(--background-accent-light);
+        margin-block-start: 1.5rem;
+        padding-block-start: 1.5rem;
+      }
     }
   }
 
