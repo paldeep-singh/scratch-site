@@ -273,6 +273,29 @@
     gap: 0.5rem 1rem;
   }
 
+  .site-footer {
+    text-align: center;
+    padding-block: 2rem;
+    display: grid;
+    gap: 2rem;
+    background-color: var(--background-dark);
+
+    a {
+      color: var(--text-high-contrast);
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--text-brand-light);
+    }
+  }
+
+  .site-footer__title {
+    font-size: var(--font-size-lg);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+  }
+
   .primary-navigation {
     ul {
       display: flex;
