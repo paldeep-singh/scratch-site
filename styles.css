@@ -1,4 +1,8 @@
-@layer reset, base, layout, components, utilities;
+/* @layer reset, base, layout, components, utilities; */
+
+@view-transition {
+  navigation: auto;
+}
 
 @layer reset {
   *,
