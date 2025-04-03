@@ -53,3 +53,10 @@ function filterCards() {
     noMatches.hidden = false;
   }
 }
+
+function enableFiltering() {
+  seasonalFilter.hidden = false;
+  edibleFilter.hidden = false;
+}
+
+enableFiltering();
