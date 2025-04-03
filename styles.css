@@ -152,6 +152,13 @@
   html {
     font-family: var(--ff-body);
     line-height: 1.6;
+    scroll-padding: 2rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
