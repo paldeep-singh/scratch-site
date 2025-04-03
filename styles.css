@@ -331,6 +331,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.5rem 1rem;
+
+    @media (prefers-color-scheme: light) {
+      svg path {
+        fill: var(--clr-brand-600);
+      }
+    }
   }
 
   .site-footer {
