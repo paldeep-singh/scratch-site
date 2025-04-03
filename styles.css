@@ -84,6 +84,7 @@
     --clr-gray-100: hsl(0, 2%, 79%);
     --clr-brand-400: hsl(25, 88%, 75%);
     --clr-brand-500: hsl(25, 88%, 66%);
+    --clr-brand-600: hsl(25, 75%, 20%);
     --clr-green-300: hsl(143, 19%, 69%);
     --clr-green-400: hsl(143, 19%, 49%);
     --clr-green-500: hsl(143, 38%, 37%);
@@ -99,8 +100,12 @@
     --clr-brown-800: hsl(0, 6%, 15%);
     --clr-brown-900: hsl(0, 6%, 13%);
 
+    --clr-orange-300: hsl(28, 76%, 66%);
     --clr-orange-500: hsl(28, 43%, 28%);
+
+    --clr-red-300: hsl(359, 99%, 72%);
     --clr-red-500: hsl(359, 34%, 24%);
+    --clr-teal-300: hsl(187, 75%, 64%);
     --clr-teal-500: hsl(186, 42%, 25%);
 
     --ff-heading: "Outfit", sans-serif;
@@ -159,7 +164,6 @@
     --border-radius-3: 0.75rem;
 
     @media (prefers-color-scheme: light) {
-      /* --background-accent-light: var(--clr-green-200); */
       --background-accent-main: var(--clr-green-300);
       --background-accent-dark: var(--clr-green-400);
 
@@ -167,11 +171,11 @@
       --background-light: var(--clr-brown-200);
       --background-main: var(--clr-brown-300);
       --background-dark: var(--clr-brown-400);
-      --background-extra-dark: var(--clr-brown-500);
+      --background-extra-dark: var(--clr-brown-400);
 
       --text-main: var(--clr-brown-700);
       --text-high-contrast: var(--clr-brown-900);
-      --text-brand: var(--clr-brand-500);
+      --text-brand: var(--clr-brand-600);
       --text-brand-light: var(--clr-brand-400);
     }
   }
@@ -441,10 +445,10 @@
 
   .hero__title {
     font-size: var(--font-size-heading-lg);
-
+    color: var(--clr-white);
     span {
       font-size: var(--font-size-heading-xl);
-      color: var(--text-brand);
+      color: var(--clr-brand-500);
       /* make sure emphasised text is always on its own line (do testing to make sure there's no weird spacing) */
       display: block;
     }
@@ -500,7 +504,7 @@
       }
 
       [data-edible="toxic"] {
-        --tag-bg: var(--clr-red-500);
+        --tag-bg: light-dark(var(--clr-red-300), var(--clr-red-500));
       }
 
       [data-season="summer"] {
@@ -508,11 +512,11 @@
       }
 
       [data-season="spring"] {
-        --tag-bg: var(--clr-teal-500);
+        --tag-bg: light-dark(var(--clr-teal-300), var(--clr-teal-500));
       }
 
       [data-season="fall"] {
-        --tag-bg: var(--clr-orange-500);
+        --tag-bg: light-dark(var(--clr-orange-300), var(--clr-orange-500));
       }
     }
   }
